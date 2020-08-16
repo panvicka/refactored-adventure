@@ -1,7 +1,9 @@
+import { EditDialogComponent } from './edit-dialog/edit-dialog.component';
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
 
- 
+
 
 
 @Component({
@@ -18,9 +20,9 @@ export class AppComponent {
   demoData;
 
 
-  constructor() {
+  constructor(private dialog: MatDialog) {
 
-    
+
 
     this.timer = setInterval(() => {
       this.progressAuto++;
@@ -61,7 +63,20 @@ export class AppComponent {
 
   }
 
- 
+  openDialog() {
+    
+    this.dialog.open(EditDialogComponent, { 
+      autoFocus: false,
+      data: {
+        courseID:1
+      }
+    }) //autofocus false: to prevent focusing first field in the dialog 
+      .afterClosed()
+      .subscribe(result => console.log(result))
+      ;
+  }
+
+
 
 
   onChange($event) {

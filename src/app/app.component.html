@@ -117,3 +117,62 @@
 
   <button (click)="addProgress()">add progress </button>
 </div>
+
+
+<div class="comp-container">
+  <h2>Tooltips</h2>
+  <span matTooltip="Info about the action" matTooltipPosition="right">Text text text</span>
+
+</div>
+
+<!-- min height prevents auto scrolling when cahnging tabs -->
+<div class="comp-container" style='min-height:800px'>
+  <h2>Tabs</h2>
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="First">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget nulla pretium, commodo
+      leo scelerisque, viverra libero. Donec vulputate lectus id lectus faucibus, non posuere justo sodales. Integer
+      lacinia vitae turpis tempor bibendum. Vivamus id orci mi. Nam ut nunc sed felis bibendum pharetra. Nam iaculis
+      porttitor augue eget molestie. Sed tempor tellus et vestibulum pellentesque. Cras tempus mi condimentum eleifend
+      viverra. Etiam tortor quam, ornare id odio ac, blandit venenatis magna. Etiam vehicula sem quis risus molestie
+      luctus.
+
+      Integer eget mi et nisi consectetur congue. Nam vitae leo non eros porttitor vestibulum quis eu nulla. In finibus
+      ex eget lectus suscipit venenatis. Sed lacinia massa vel eleifend suscipit. Donec lacus erat, tempor ac molestie
+      at, ornare nec massa. Quisque non mauris nisi. Curabitur laoreet, diam nec iaculis dictum, risus urna laoreet
+      velit, a dictum risus dolor vitae eros. Morbi sodales blandit eros eget sollicitudin. Nam vehicula dui interdum,
+      feugiat enim id, dignissim est. Nulla facilisi. Pellentesque et iaculis diam. Nam eget massa magna. Maecenas et
+      nisi laoreet, suscipit nisi nec, fringilla eros. Morbi velit nisi, malesuada maximus nunc a, commodo sollicitudin
+      dolor.
+
+      Vestibulum congue sit amet tellus vitae suscipit. Duis eu faucibus purus. Morbi rhoncus enim est, ac vulputate
+      sapien hendrerit in. Quisque eu scelerisque mauris. Aliquam sit amet ipsum quis ligula viverra dignissim.
+      Pellentesque sit amet enim pretium, fringilla nunc id, rutrum nunc. Morbi varius viverra nisi, et auctor magna
+      varius et. Proin rutrum dictum gravida. Donec in fermentum sem. Mauris quam quam, egestas at suscipit at,
+      dignissim eu velit. Nunc tristique at nunc et aliquet. Mauris ultricies orci metus, eu bibendum turpis volutpat
+      id. Praesent fermentum est eget laoreet auctor. Maecenas gravida leo eget urna mattis varius vel vitae nunc.
+
+      Quisque vitae dui porttitor, tempor ex eget, convallis ligula. Sed nec porttitor neque, quis sollicitudin odio.
+      Vestibulum at vulputate velit. Mauris tristique a magna vitae aliquam. Praesent ut tellus ligula. Vivamus iaculis
+      quis diam tempor blandit. Sed vel nisl ligula. Fusce venenatis, erat tristique lacinia elementum, purus leo
+      egestas neque, ut maximus est sem vitae diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+      posuere cubilia curae; Fusce sed enim vel odio semper ornare. Praesent quis malesuada erat. Sed gravida tellus ut
+      sodales feugiat. Mauris sed ex mauris.
+
+      Mauris quis ligula nunc. Integer a pretium ante. Quisque bibendum orci dapibus dolor tincidunt ornare. Sed maximus
+      lorem sit amet feugiat euismod. Proin faucibus diam eu erat laoreet accumsan. Cras mauris orci, tempor vitae quam
+      vel, elementum eleifend odio. Nam sit amet dictum leo. Morbi tempor lacus eget enim facilisis viverra. Vestibulum
+      posuere est at molestie faucibus. Duis elit odio, facilisis sed purus vel, ullamcorper lacinia augue. Sed ut
+      pretium nunc. Ut convallis orci quis consectetur efficitur. Ut dui urna, mollis at viverra vel, interdum sit amet
+      est. Phasellus vulputate nec lacus non mollis. Sed rutrum dolor nec tristique iaculis. Etiam mollis aliquet
+      egestas.</mat-tab>
+    <mat-tab label="Second">Content 2</mat-tab>
+    <mat-tab label="Third">Content 3</mat-tab>
+  </mat-tab-group>
+
+</div>
+
+<div class="comp-container">
+  <button (click)="openDialog()" 
+  mat-raised-button>Dialog</button>
+
+</div>
