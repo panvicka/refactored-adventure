@@ -1,14 +1,16 @@
-<div>
+<div class="comp-container">
+  <h2>Checkers</h2>
   <mat-checkbox [value]="" [checked]="isChecked">Test checker 1</mat-checkbox> <br>
   <div *ngIf="showDetails.checked">Details</div>
   <mat-checkbox [value]="" checked="true">Test checker 2</mat-checkbox> <br>
-  <mat-checkbox [value]="" checked="true" (change)=onChange($event) #showDetails>Test checker 3 (show details)</mat-checkbox>
+  <mat-checkbox [value]="" checked="true" (change)=onChange($event) #showDetails>Test checker 3 (show details)
+  </mat-checkbox>
 
 </div>
 
 
-<div>
-
+<div class="comp-container">
+  <h2>Radios</h2>
   <mat-radio-group aria-label="Select an option" value=1>
     <mat-radio-button value="1">Option 1</mat-radio-button>
     <mat-radio-button value="2">Option 2</mat-radio-button>
@@ -16,4 +18,43 @@
 
 </div>
 
+<div class="comp-container">
+  <h2>Native drop</h2>
+  <select>
+    <option *ngFor="let color of colors" [value]="color.id">{{color.name}}</option>
+  </select>
+</div>
 
+<div class="comp-container">
+  <h2>Basic mat-select</h2>
+  <mat-form-field appearance="fill">
+    <mat-label>Colors</mat-label>
+    <mat-select [(ngModel)]="color">
+      <mat-option *ngFor="let color of colors" [value]="color.id">{{color.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div class="comp-container">
+  <h2>Inputs</h2>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Username</mat-label>
+    <input ngModel #username="ngModel" name="username" matInput placeholder="Enter your username" required>
+    <mat-hint>Type a unique username</mat-hint>
+    <span matSuffix>@domain.com</span>
+    <span matPrefix>admin.</span>
+    <mat-error *ngIf="username.invalid && username.errors.required">
+      The Username field is required.
+    </mat-error>
+  </mat-form-field>
+</div>
+
+<div class="comp-container">
+  <h2>Text Area</h2>
+  <mat-form-field>
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput matTextareaAutosize placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+</div>
