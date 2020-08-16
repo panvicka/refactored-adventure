@@ -58,3 +58,62 @@
     <textarea matInput matTextareaAutosize placeholder="Ex. It makes me feel..."></textarea>
   </mat-form-field>
 </div>
+
+
+<div class="comp-container">
+  <h2>Date picker</h2>
+  <mat-form-field appearance="fill">
+    <mat-label>Birthday</mat-label>
+    <input (focus)="picker.open()" [min]="minDate" [max]="maxDate" matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker touchUi="true"></mat-datepicker>
+  </mat-form-field>
+</div>
+
+
+<div class="comp-container">
+  <h2>Icons</h2>
+  <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+  <mat-icon aria-hidden="false" aria-label="Notification">notification_important</mat-icon>
+  <mat-icon aria-hidden="false" aria-label="Favorite">favorite</mat-icon>
+</div>
+
+<div class="comp-container">
+  <h2>Buttons</h2>
+  <button mat-button>Button (mat-button)</button>
+  <button mat-raised-button color="primary">Button (raised button, primary)</button>
+  <button mat-raised-button color="accent">Button (raised button, accent)</button>
+  <button mat-raised-button color="warn">Button (raised button, warn)</button>
+
+  <button mat-mat-icon-button>Button (icon-button)</button>
+  <button mat-fab color="primary">
+    <mat-icon>check</mat-icon>
+  </button>
+  <button mat-mini-fab>
+    <mat-icon>check</mat-icon>
+  </button>
+  <button mat-stroked-button>Button (mat-stroked-button)</button>
+  <button mat-flat-button>Button (mat-flat-button)</button>
+</div>
+
+<div class="comp-container">
+  <h2>Chips</h2>
+  <mat-chip-list aria-label="Chios">
+    <mat-chip *ngFor="let cat of categories" (click)="selectCategory(cat)" [selected]="cat.selected">{{cat.name}}
+    </mat-chip>
+    <!--  <mat-chip color="warn" selected="true">Chip one</mat-chip>
+    <mat-chip>Chip two</mat-chip>
+    <mat-chip color="primary" selected>Chip three</mat-chip>
+    <mat-chip color="accent" selected>Chip four</mat-chip> -->
+  </mat-chip-list>
+
+</div>
+
+<div class="comp-container">
+  <h2>Progress spinner</h2>
+  <mat-spinner mode="determinate" [value]=progress></mat-spinner>
+  <mat-spinner mode="determinate" [value]=progressAuto></mat-spinner>
+  <mat-spinner mode="indeterminate" [value]=progressAuto></mat-spinner>
+
+  <button (click)="addProgress()">add progress </button>
+</div>

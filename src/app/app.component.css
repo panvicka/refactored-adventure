@@ -7,3 +7,16 @@
   display: flexbox;
  
 }
+
+
+/* .mat-icon {
+  color: purple;
+  font-size: 50px;
+  margin-left: 10px;
+} */
+
+button {
+   display: block;
+   margin-top: 10px;
+   
+ }
